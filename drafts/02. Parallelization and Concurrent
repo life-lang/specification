@@ -1,7 +1,8 @@
 2 Parallelization and Concurrency
 2.1 Forking
 2.2 Joining
-2.3 Example
+2.3 Accessing shared resources by threads
+2.4 Example
 
 2.1 Forking
 
@@ -13,7 +14,11 @@ It is possible to give a name to the new thread, just following '-' with '(theTh
 The 'v' character in the beginning of line instruction indicate to wait for the completion of
 all above started threads. Is is possible to use a list of thread names to wait for.
 
-2.3 Example
+2.3 Accessing shared resources by threads
+
+The '@' character is used to access variables created inside threads.
+
+2.4 Example
 
 # We do many tasks in parallel (inclusive the test of the if -- the ? character) and wait for completion of 2 named threads.
 - ! doSomeHardWork_1
@@ -27,6 +32,5 @@ all above started threads. Is is possible to use a list of thread names to wait 
         - (MyNamedThread3)
                 - ! doSomeHardWork_5
 v (MyNamedThread1, MyNamedThread3)
-- showEndOfProgram
-
 v @ {MyNamedThread1}.myThreadVar := 200
+- showEndOfProgram
