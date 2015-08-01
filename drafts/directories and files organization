@@ -1,0 +1,42 @@
+===============================
+life-lang.org
+Artistic License v2
+01/aug/2015 Gustavo da Silva
+(specification draft)
+===============================
+
+src/life/com,company,macrosystem,minisystem,class,Customer.life
+
+Methods should be in its own file. (turning easy control version of behaviour, and keeping small files)
+
+	Example: The content of file "com,company,macrosystem,minisystem,module,submodule,impl,Prints,printNumber.method.life" would be:
+
+		printNumber (as method {theNumber}
+					 - ! print theNumber
+				)
+
+A couple of methods can be grouped in a 'bundle' file.
+
+	Example: The content of file "com,company,macrosystem,minisystem,module,submodule,ABundle.bundle.life":
+
+		printNumber (as method {theNumber}
+					 - ! print theNumber
+				)
+		printString (as method {theString}
+					 - ! print theString
+				)
+		terminateProgram (as method
+					 - ! print 'end of the program.'
+				)
+
+
+Serializable (as facet
+		giveANumber
+		processTheNumber (as msg)
+		terminate
+		)
+
+
+-------------------------------
+End of 'Flow-Control.txt' file.
+===============================

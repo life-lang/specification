@@ -1,0 +1,53 @@
+===============================
+life-lang.org
+Artistic License v2
+01/aug/2015 Gustavo da Silva
+(specification draft)
+===============================
+
+3     Flow-Control:
+3.1   Flow-Control: Introduction
+3.2   Flow-Control: Branching
+3.3   Flow-Control: Looping
+3.3.1 Flow-Control: Looping: Conditional
+3.3.2 Flow-Control: Looping: Counting
+
+-------------------------------
+
+3.2   Flow-Control: Branching
+
+Branching is done by interrogation character. (the 'if' command in the other languages; 'z' is the 'else'.)
+
+	- ! hardWork0
+	- ? varA = varB
+		- ! hardWork1 
+		- ! hardWork2
+		v # Waiting for completion of all above parallel invocated methods.
+	  ? varA = varC
+		- ! hardWork3
+	  z # the 'else'
+		- ! hardWork4
+	v # Waiting for completion of all above parallel invocated methods.
+	v ! print 'End of program.'
+
+3.3.1 Flow-Control: Looping: Conditional
+
+Looping is done by 'o' character. (the 'while' or 'for' command(s) in the other languages)
+
+	- o a < 10
+		v ! increment(a)
+		v ! print(a)
+
+3.3.2 Flow-Control: Looping: Counting
+
+	# All 3 loops below will be done in parallel.
+	- o 1..10 (i)
+	    v ! doSomeWorkWith(i)
+	- o varA..varB (j)
+	    v ! doSomeWorkWith(j)
+	- o 'a'..'z' (c)
+	    v ! doSomeWorkWith(c)
+
+-------------------------------
+End of 'Flow-Control.txt' file.
+===============================
