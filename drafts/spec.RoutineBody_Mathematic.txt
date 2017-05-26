@@ -1,0 +1,46 @@
+About mathematic operations inside routines.
+
+	$	formulas:
+			# ...
+		functions:
+			# ...
+
+Rules:
+	About formulae:
+		The 'formulae:' is the section at the same line than '$' section.
+		Formula's name starts with one dollar char and is composed by letters,
+			numbers, and have no limit for length/size. The name is
+			followed by one space, which is followed by : which is
+			followed by equals char, which is followed by one space
+			which is followed by one dollar char, which is followed
+			by a symbolic name, which is followed by one space, which
+			is followed by the equals char, which is followed by one
+			space, which is followed by the equation.
+		??? Functions are referenced only inside formulas at 'formulas:' section.
+		Equation may refer a function invocation, a modulus operation, other arithmetic operations (add, sub, mul, div).
+	About functions:
+		The 'functions:' is the section after 'formulae:' section.
+		Function's name starts with a letter and is composed by letters,
+			numbers, and have no limit for length/size. The name is
+			followed by one open-parenthese. The open-parenthese is
+			followed by, at least, one argument. If there are more
+			than one argument, those are separated by coma; The
+			arguments is followed by a close-parenthese. The
+			close-parenthese is followed by one space, which is
+			followed by : which is followed by equals char, which is
+			followed by one space which is followed by the equation.
+		Functions are referenced only inside formulas at 'formulas:' section.
+		TODO:functions operate only with numbers???
+		TODO:functions body referes only to another functions or basic math???
+
+Example:
+		# ...
+	$	formulae:
+			$formula1 := $a = 4 + ($b + fnX(2, $c))
+			$formula2 := $x = $a + |$b| - 3
+		functions:
+			fn1($a) := 4	# Compiler will emit error. Functions have, at least, 1 argument.
+			fn2($a,$b,$c) := $a + $b / $c
+			fn3($a,$b,$c,$d) := ($a + $b) * $c
+
+END-OF-FILE.
