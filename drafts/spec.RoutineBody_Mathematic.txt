@@ -39,7 +39,7 @@ Example:
 			$formula1 := $a = 4 + ($b + fnX(2, $c))
 			$formula2 := $x = $a + |$b| - 3
 		functions:
-			fn1($a) := 4	# Compiler will emit error. Functions have, at least, 1 argument.
+			# fn1() := 3	# Compiler will emit error. Functions have, at least, 1 argument.
 			fn2($a,$b,$c) := $a + $b / $c
 			fn3($a,$b,$c,$d) := ($a + $b) * $c
 
