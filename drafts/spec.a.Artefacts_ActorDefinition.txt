@@ -1,0 +1,23 @@
+Actors are abstractions which perform work (process).
+
+The most basic definition of an Actor is:
+
+<ActorName> (as actor)
+	[public interface]
+		services:
+			[dependencies]
+			[msgs]
+	[internals]
+		attributes:
+		invariants:
+		methods:
+
+About '[public interface]' section.
+
+'services' subsection contains operations those the actor can perform.
+
+About '[internals]' section.
+
+'attributes' subsection contains attributes definitions about the actor.
+'invariants' subsection contains logical expressions applied on attributes of the actor.
+'methods' subsection contains operations those the actor can perform.
