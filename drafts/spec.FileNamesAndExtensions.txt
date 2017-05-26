@@ -1,0 +1,19 @@
+<ModuleName>.moduleinfo.life
+<ModuleName>.services.life
+
+<FileName>.bigbundle.life
+<FileName>.smallbundle.life
+
+<DomainActorName>.actor.life
+<DomainEntityName>.entity.life
+<DomainProcessName>.process.life
+
+
+<ModuleName>/
+	dmodel/
+		actors/
+		entities/
+		processes/
+	tsupport/
+		dmodel/
+		integration/
